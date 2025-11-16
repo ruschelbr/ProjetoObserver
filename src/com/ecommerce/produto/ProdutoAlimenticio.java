@@ -5,12 +5,10 @@ import java.time.LocalDate;
 public class ProdutoAlimenticio extends Produto {
     
     private LocalDate dataValidade;
-    private String[] ingredientes;
     
-    public ProdutoAlimenticio(String nome, String descricao, double preco, int estoque, LocalDate dataValidade, String[] ingredientes) {
+    public ProdutoAlimenticio(String nome, String descricao, double preco, int estoque, LocalDate dataValidade) {
         super(nome, descricao, preco, estoque);
         this.dataValidade = dataValidade;
-        this.ingredientes = ingredientes;
     }
     
     public LocalDate getDataValidade() {
@@ -19,14 +17,6 @@ public class ProdutoAlimenticio extends Produto {
     
     public void setDataValidade(LocalDate dataValidade) {
         this.dataValidade = dataValidade;
-    }
-    
-    public String[] getIngredientes() {
-        return ingredientes;
-    }
-    
-    public void setIngredientes(String[] ingredientes) {
-        this.ingredientes = ingredientes;
     }
     
     @Override

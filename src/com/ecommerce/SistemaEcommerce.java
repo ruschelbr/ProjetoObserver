@@ -127,30 +127,20 @@ public class SistemaEcommerce {
             case 1:
                 System.out.print("Voltagem: ");
                 int voltagem = lerInteiro();
-                System.out.print("Marca: ");
-                scanner.nextLine();
-                String marca = scanner.nextLine();
-                produto = new ProdutoEletronico(nome, descricao, preco, estoque, voltagem, marca);
+                produto = new ProdutoEletronico(nome, descricao, preco, estoque, voltagem);
                 break;
             case 2:
                 System.out.print("Tamanho (P/M/G/GG): ");
                 scanner.nextLine();
                 String tamanho = scanner.nextLine();
-                System.out.print("Cor: ");
-                String cor = scanner.nextLine();
-                System.out.print("Material: ");
-                String material = scanner.nextLine();
-                produto = new ProdutoRoupa(nome, descricao, preco, estoque, tamanho, cor, material);
+                produto = new ProdutoRoupa(nome, descricao, preco, estoque, tamanho);
                 break;
             case 3:
                 System.out.print("Data de Validade (yyyy-MM-dd): ");
                 scanner.nextLine();
                 String dataStr = scanner.nextLine();
                 LocalDate validade = LocalDate.parse(dataStr);
-                System.out.print("Ingredientes (separados por virgula): ");
-                String ingredientesStr = scanner.nextLine();
-                String[] ingredientes = ingredientesStr.split(",");
-                produto = new ProdutoAlimenticio(nome, descricao, preco, estoque, validade, ingredientes);
+                produto = new ProdutoAlimenticio(nome, descricao, preco, estoque, validade);
                 break;
             default:
                 System.out.println("Tipo invalido!");
