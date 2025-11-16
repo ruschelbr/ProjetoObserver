@@ -7,10 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Sistema de E-Commerce com Padrão Observer - VERSÃO INTERATIVA
- * Permite criar produtos, cadastrar clientes e testar o padrão dinamicamente via terminal
- */
 public class SistemaEcommerce {
     
     private static Scanner scanner = new Scanner(System.in);
