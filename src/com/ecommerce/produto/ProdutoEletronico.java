@@ -4,8 +4,8 @@ public class ProdutoEletronico extends Produto {
     
     private int voltagem;
     
-    public ProdutoEletronico(String nome, String descricao, double preco, int estoque, int voltagem) {
-        super(nome, descricao, preco, estoque);
+    public ProdutoEletronico(String nome, double preco, int estoque, int voltagem) {
+        super(nome, preco, estoque);
         this.voltagem = voltagem;
     }
     

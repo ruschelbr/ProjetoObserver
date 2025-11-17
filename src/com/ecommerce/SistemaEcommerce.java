@@ -112,9 +112,6 @@ public class SistemaEcommerce {
         scanner.nextLine(); // limpa buffer
         String nome = scanner.nextLine();
         
-        System.out.print("Descricao: ");
-        String descricao = scanner.nextLine();
-        
         System.out.print("Preco: ");
         double preco = lerDouble();
         
@@ -127,20 +124,20 @@ public class SistemaEcommerce {
             case 1:
                 System.out.print("Voltagem: ");
                 int voltagem = lerInteiro();
-                produto = new ProdutoEletronico(nome, descricao, preco, estoque, voltagem);
+                produto = new ProdutoEletronico(nome, preco, estoque, voltagem);
                 break;
             case 2:
                 System.out.print("Tamanho (P/M/G/GG): ");
                 scanner.nextLine();
                 String tamanho = scanner.nextLine();
-                produto = new ProdutoRoupa(nome, descricao, preco, estoque, tamanho);
+                produto = new ProdutoRoupa(nome, preco, estoque, tamanho);
                 break;
             case 3:
                 System.out.print("Data de Validade (yyyy-MM-dd): ");
                 scanner.nextLine();
                 String dataStr = scanner.nextLine();
                 LocalDate validade = LocalDate.parse(dataStr);
-                produto = new ProdutoAlimenticio(nome, descricao, preco, estoque, validade);
+                produto = new ProdutoAlimenticio(nome, preco, estoque, validade);
                 break;
             default:
                 System.out.println("Tipo invalido!");

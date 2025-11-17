@@ -6,8 +6,8 @@ public class ProdutoAlimenticio extends Produto {
     
     private LocalDate dataValidade;
     
-    public ProdutoAlimenticio(String nome, String descricao, double preco, int estoque, LocalDate dataValidade) {
-        super(nome, descricao, preco, estoque);
+    public ProdutoAlimenticio(String nome, double preco, int estoque, LocalDate dataValidade) {
+        super(nome, preco, estoque);
         this.dataValidade = dataValidade;
     }
     

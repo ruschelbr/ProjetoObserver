@@ -4,8 +4,8 @@ public class ProdutoRoupa extends Produto {
     
     private String tamanho;
     
-    public ProdutoRoupa(String nome, String descricao, double preco, int estoque, String tamanho) {
-        super(nome, descricao, preco, estoque);
+    public ProdutoRoupa(String nome, double preco, int estoque, String tamanho) {
+        super(nome, preco, estoque);
         this.tamanho = tamanho;
     }
     

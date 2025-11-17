@@ -7,14 +7,12 @@ import java.util.List;
 public abstract class Produto {
     
     protected String nome;
-    protected String descricao;
     protected double preco;
     protected int estoque;
     protected List<ClienteObservador> observadores;
     
-    public Produto(String nome, String descricao, double preco, int estoque) {
+    public Produto(String nome, double preco, int estoque) {
         this.nome = nome;
-        this.descricao = descricao;
         this.preco = preco;
         this.estoque = estoque;
         this.observadores = new ArrayList<>();
@@ -53,14 +51,6 @@ public abstract class Produto {
     
     public void setNome(String nome) {
         this.nome = nome;
-    }
-    
-    public String getDescricao() {
-        return descricao;
-    }
-    
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
     }
     
     public double getPreco() {
